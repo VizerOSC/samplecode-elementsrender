@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram Test</title>
+    <link rel="stylesheet" href="resources/reset.css">
+    <link rel="stylesheet" href="resources/style.css">
+    <script src="resources/app.js"></script>
+    <script src="resources/response.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            new Application();
+        });
+    </script>
+    <script type="text/x-template" id="instagram-page-tpl">
+        <div class="page-wrapper mount-el">
+            {%content%}
+        </div>
+    </script>
+    <script type="text/x-template" id="instagram-listview-tpl">
+        <div class="listview-container mount-el">
+            {%content%}
+        </div>
+    </script>
+    <script type="text/x-template" id="instagram-element-tpl">
+        <div class="listview-element" id="{%id%}">
+            <div class="instagram-el-content">
+                <div class="instagram-el-content-header">
+                    <div class="instagram-el-icon">
+                        <img class="instagram-el-icon-img" src="{%icon_url%}">
+                    </div>
+                    <div class="instagram-el-caption">
+                        <strong>{%nickname%}</strong>
+                        <br>
+                        <span>{%fullname%}</span>
+                    </div>
+                    <div class="instagram-el-timestamp">{%timestamp%}</div>
+                </div>
+                <div class="instagram-el-image">
+                    <img class="instagram-el-img" src="{%image%}">
+                </div>
+                <div class="instagram-el-content-likes">{%likes_counter%}</div>
+                <div class="instagram-el-content-text">{%text%}</div>
+            </div>
+        </div>
+    </script>
+</head>
+<body>
+
+</body>
+</html>

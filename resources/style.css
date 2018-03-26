@@ -1,0 +1,156 @@
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+/* ListView Container */
+.listview-container {
+    margin: 0 auto;
+    width: 768px;
+    padding-top: 50px;
+}
+
+
+.grid-layout.listview-container {
+    column-width: 280px;
+    column-gap: 20px;
+    width: 900px;
+}
+
+@media screen and (min-width: 620px) and (max-width: 920px) {
+    .grid-layout.listview-container {
+        width: 600px;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 619px) {
+    .grid-layout.listview-container {
+        width: 300px;
+    }
+}
+
+/* ListView Abstract Element Wrapper */
+.listview-element {
+    border: 1px solid #ccc;
+    position: relative;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    margin: 0 0 40px 0;
+}
+
+.list-layout .listview-element {
+    height: 350px;
+    width: auto;
+    overflow: hidden;
+}
+
+.grid-layout .listview-element {
+    width: 280px;
+    height: auto;
+
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+/* ListView Instagram Element Textual Content Wrapper */
+.list-layout .instagram-el-content {
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    padding: 0 10px;
+}
+
+.grid-layout .instagram-el-content {
+    position: relative;
+}
+
+/* ListView Instagram Element Header Container */
+.instagram-el-content-header {
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    padding: 10px 0;
+}
+
+.grid-layout .instagram-el-content-header {
+    border-bottom: none;
+    margin: 0 10px;
+}
+
+.instagram-el-content-header > .instagram-el-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.instagram-el-content-header > .instagram-el-caption {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left:10px;
+    max-width: 80%;
+}
+
+.grid-layout .instagram-el-content-header > .instagram-el-caption {
+    max-width: 70%;
+}
+
+.instagram-el-content-header > .instagram-el-timestamp {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: #aaa;
+}
+
+/* ListView Instagram Element Image */
+
+.list-layout .instagram-el-image {
+    position: absolute;
+    left:0;
+    top: 50%;
+    width: 100%;
+    transform: translate(-100%, -50%);
+    overflow: hidden;
+}
+
+.grid-layout .instagram-el-image {
+    position: relative;
+    width: 100%;
+}
+
+.instagram-el-img, .instagram-el-icon-img {
+    width: 100%;
+    display: block;
+}
+
+/* ListView Instagram Element Content (Likes Counter + Text) */
+
+.instagram-el-content-likes {
+    display: inline-block;
+    background: url(heart.png) left center no-repeat;
+    background-size: 15px;
+    padding: 3px 3px 3px 20px;
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.instagram-el-content-text {
+    margin-bottom: 20px;
+}
+
+.grid-layout .instagram-el-content-likes, .grid-layout .instagram-el-content-text {
+    margin-left: 10px;
+    margin-right: 10px;
+}
